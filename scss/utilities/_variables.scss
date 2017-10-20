@@ -1,0 +1,97 @@
+//Use this partial to create variables for your repeated values.
+//At minimum, create variables for fonts, breakpoints, and colors.
+
+// ==========================================================================
+// Fonts
+// ==========================================================================
+$base--font-size: 16;
+$font-url: "https://fonts.googleapis.com/css?family=Open+Sans";
+$font-family--primary: 'Open Sans',
+sans-serif;
+// Font Weights
+$font-weight--thin: 100;
+$font-weight--light: 300;
+$font-weight--medium: 400;
+$font-weight--bold: 700;
+$font-weight--ultra-bold: 900;
+
+// ==========================================================================
+// Functions
+// ==========================================================================
+//Pixels to em
+@function pem($target, $context: $base--font-size) {
+    @return (($target / $base--font-size) * 1em);
+}
+
+//Load imported fonts
+@if variable-exists(font-url) {
+    @import url($font-url);
+}
+
+// ==========================================================================
+// Breakpoints
+// ==========================================================================
+
+$breaks: (
+    'med': 480px,
+    'lg': 1024px
+);
+
+// ==========================================================================
+// Colors
+// ==========================================================================
+
+$viking: #58E1C1;
+$malibu: #52DDFC;
+$emerald: #63CC82;
+$sunglo: #E4757A;
+$coral: #FD7856;
+$majesty: #927BC1;
+$riptide: #80E8D1;
+$shakespeare: #3FABCA;
+$anakiwa: #7EE6FD;
+$lilac: #DEB2EE;
+$vista: #88D9A0;
+$sea-pink: #EC9FA3;
+$tangerine: #FD9F85;
+
+//Main colors
+$color--primary: $malibu;
+$color--secondary: $viking;
+
+//Buttons
+$color--default: $color--primary;
+$color--success: $emerald;
+$color--error: $sunglo;
+$color--warning: $coral;
+$color--info: $majesty;
+
+//Grid System
+
+$color--grid: (
+    '3': $lilac,
+    '4': $anakiwa,
+    '5': $vista,
+    '6': $shakespeare,
+    '7': $sea-pink,
+    '8': $tangerine,
+    '12': $riptide
+);
+
+// ==========================================================================
+// Grid Config
+// ==========================================================================
+
+$grid--width: 1260;
+$grid--gutter: pem(16);
+
+$grid-col--width: (
+     '3': percentage(0.25 * $grid--width), 
+     '4': percentage(0.30 * $grid--width),
+     '5': percentage(0.42 * $grid--width), 
+     '6': percentage(0.50 * $grid--width), 
+     '7': percentage(0.58 * $grid--width), 
+     '8': percentage(0.67 * $grid--width), 
+     '12': percentage(1.00 * $grid--width)
+     );
+

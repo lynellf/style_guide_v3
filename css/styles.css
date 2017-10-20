@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url(normalize.css);
+* {
+  box-sizing: border-box; }
+
+ul {
+  padding-left: 0; }
+
+p {
+  line-height: 1.5em; }
+
+.grid__row {
+  display: grid;
+  max-width: 1260 px;
+  grid-gap: 1em px; }
+
+/*# sourceMappingURL=styles.css.map */

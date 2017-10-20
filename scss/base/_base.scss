@@ -1,0 +1,14 @@
+//the universal selector (*)
+* {
+    box-sizing: border-box;
+}
+
+//ul elements
+ul {
+    padding-left: 0;
+}
+
+//p elements
+p {
+    line-height: pem(24);
+}

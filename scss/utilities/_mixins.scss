@@ -1,0 +1,13 @@
+//Media Queries
+
+//Flexbox settings
+
+//Grid Settings
+
+@mixin grid {
+    display: grid;
+    max-width: ($grid--width)px;
+    grid-gap: ($grid--gutter)px;
+}
+
+//Element and Modifier BEM Selectors
