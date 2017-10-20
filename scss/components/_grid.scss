@@ -1,3 +1,13 @@
-.grid__row {
-    @include grid;
+.container {
+    @include flex();
+}
+
+.grid__row{
+    @include flex--grid;
+}
+
+@each $col, $width in $grid-col--width {
+    .grid__col--#{$col} {
+        width: $width;
+    }
 }

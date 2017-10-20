@@ -28,6 +28,11 @@ $font-weight--ultra-bold: 900;
     @import url($font-url);
 }
 
+//Value to pixels
+@function pixels($target) {
+    @return(($target * 1px));
+}
+
 // ==========================================================================
 // Breakpoints
 // ==========================================================================
@@ -84,14 +89,16 @@ $color--grid: (
 
 $grid--width: 1260;
 $grid--gutter: pem(16);
+$grid-row--width: percentage($number: 1);
+$grid--columns: 12;
 
 $grid-col--width: (
-     '3': percentage(0.25 * $grid--width), 
-     '4': percentage(0.30 * $grid--width),
-     '5': percentage(0.42 * $grid--width), 
-     '6': percentage(0.50 * $grid--width), 
-     '7': percentage(0.58 * $grid--width), 
-     '8': percentage(0.67 * $grid--width), 
-     '12': percentage(1.00 * $grid--width)
+     '3': percentage(0.25 * 1), 
+     '4': percentage(0.30 * 1),
+     '5': percentage(0.42 * 1), 
+     '6': percentage(0.50 * 1), 
+     '7': percentage(0.58 * 1), 
+     '8': percentage(0.67 * 1), 
+     '12': percentage(1.00 * 1)
      );
 

@@ -9,9 +9,40 @@ ul {
 p {
   line-height: 1.5em; }
 
+.container {
+  display: flex;
+  flex-direction: column; }
+
 .grid__row {
-  display: grid;
-  max-width: 1260 px;
-  grid-gap: 1em px; }
+  max-width: 1260px; }
+  @media (min-width: 480px) {
+    .grid__row {
+      display: block; } }
+  @media (min-width: 1024px) {
+    .grid__row {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap; } }
+
+.grid__col--3 {
+  width: 25%; }
+
+.grid__col--4 {
+  width: 30%; }
+
+.grid__col--5 {
+  width: 42%; }
+
+.grid__col--6 {
+  width: 50%; }
+
+.grid__col--7 {
+  width: 58%; }
+
+.grid__col--8 {
+  width: 67%; }
+
+.grid__col--12 {
+  width: 100%; }
 
 /*# sourceMappingURL=styles.css.map */

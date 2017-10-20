@@ -1,13 +1,53 @@
 //Media Queries
 
+@mixin mq($break) {
+    $value: map-get($breaks, $break);
+    $med: map-get($breaks, 'med');
+    
+    @if $value == null {
+        @error "`#{$break}` is not a valid breakpoint name";
+    }
+
+    @else if $value < $med {
+        @media(max-width: $value) {
+            @content;
+        }
+    }
+
+    @else {
+        @media (min-width: $value) {
+            @content;
+}
+    }
+}
+
 //Flexbox settings
+
+@mixin flex($direction:column){
+    display: flex;
+    flex-direction: $direction;
+}
 
 //Grid Settings
 
-@mixin grid {
-    display: grid;
-    max-width: ($grid--width)px;
-    grid-gap: ($grid--gutter)px;
+@mixin flex--grid {
+    max-width: pixels($grid--width);
+    @include mq('med') {
+        display: block;
+    }
+    @include mq('lg') {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+@mixin grid--column {
+    flex: 1;
+}
+
+@mixin grid--row {
+    width: $grid-row--width;
 }
 
 //Element and Modifier BEM Selectors
