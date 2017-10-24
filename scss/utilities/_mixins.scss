@@ -23,9 +23,10 @@
 
 //Flexbox settings
 
-@mixin flex($direction:column){
+@mixin flex($direction: column, $justify: space-between, $wrap: null){
     display: flex;
     flex-direction: $direction;
+    flex-wrap: $wrap;
 }
 
 //Grid Settings
@@ -36,9 +37,7 @@
         display: block;
     }
     @include mq('lg') {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        @include flex($wrap: wrap, $direction: null, $justify: space-between);
     }
 }
 

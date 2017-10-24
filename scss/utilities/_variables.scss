@@ -5,7 +5,7 @@
 // Fonts
 // ==========================================================================
 $base--font-size: 16;
-$font-url: "https://fonts.googleapis.com/css?family=Open+Sans";
+// $font-url: "https://fonts.googleapis.com/css?family=Open+Sans";
 $font-family--primary: 'Open Sans',
 sans-serif;
 // Font Weights
@@ -88,17 +88,16 @@ $color--grid: (
 // ==========================================================================
 
 $grid--width: 1260;
-$grid--gutter: pem(16);
 $grid-row--width: percentage($number: 1);
 $grid--columns: 12;
 
 $grid-col--width: (
-     '3': percentage(0.25 * 1), 
-     '4': percentage(0.30 * 1),
-     '5': percentage(0.42 * 1), 
-     '6': percentage(0.50 * 1), 
-     '7': percentage(0.58 * 1), 
-     '8': percentage(0.67 * 1), 
-     '12': percentage(1.00 * 1)
+     '3': percentage(3/$grid--columns * 1), 
+     '4': percentage(4/$grid--columns * 1),
+     '5': percentage(5/$grid--columns * 1), 
+     '6': percentage(6/$grid--columns * 1), 
+     '7': percentage(7/$grid--columns * 1), 
+     '8': percentage(8/$grid--columns * 1), 
+     '12': percentage(9/$grid--columns * 1)
      );
 
