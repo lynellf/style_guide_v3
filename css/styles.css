@@ -14,8 +14,7 @@ p {
   flex-wrap: wrap; }
 
 .grid__row {
-  max-width: 1260px;
-  background-color: lightgrey; }
+  max-width: 1260px; }
   @media (min-width: 480px) {
     .grid__row {
       display: block; } }

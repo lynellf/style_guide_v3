@@ -4,7 +4,6 @@
 
 .grid__row{
     @include flex--grid;
-    background-color: lightgrey;
 }
 
 @each $col, $width in $grid-col--width {
