@@ -1,0 +1,24 @@
+@if variable-exists($name: $font-url) {
+    @import url($font-url);
+}
+
+.container {
+    font-family: $font-stack--primary
+}
+
+.link {
+    @extend %link;
+}
+
+.blockquote {
+    @include blockquote;
+}
+
+.headline {
+    @include m(primary) {
+        @extend %headline--primary;
+    }
+    @include m(secondary) {
+        @extend %headline--secondary;
+    }
+}

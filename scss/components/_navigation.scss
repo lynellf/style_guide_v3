@@ -1,0 +1,9 @@
+.nav {
+    @include e('item'){
+        @extend %nav--item;
+
+        * {
+            @extend %nav--a;
+        }
+    }
+}

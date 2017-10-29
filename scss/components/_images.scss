@@ -1,0 +1,14 @@
+.img {
+    @include m(logo) {
+        @extend %img--center;
+    }
+
+    @include m(frame) {
+        @extend %img--center;
+        @extend %img--frame;
+    }
+    
+    @include m(avatar) {
+        @extend %img--avatar;
+    }
+}

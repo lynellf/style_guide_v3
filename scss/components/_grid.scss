@@ -1,14 +1,20 @@
 .container {
-    @include flex($direction: column, $justify: space-between, $wrap: wrap);
+    @include flex($direction: column, $justify: null, $wrap: wrap);
 }
 
-.grid__row{
-    @include flex--grid;
-}
+.grid {
+    @include e('row') {
+        @include flex--grid;
+    }
 
-@each $col, $width in $grid-col--width {
-    .grid__col--#{$col} {
-        width: $width;
+    @include e('col') {
+        @each $col, $width in $grid-col--width {
+            @include m(#{$col}) {
+                @include grid--column;
+                @include grid--gutters;
+                flex: $width;
+            }
+        }
     }
 }
 
@@ -16,4 +22,8 @@
     .grid__col--#{$el}.theme__colors {
         background: #{$color};
     }
+}
+
+.centered {
+    @include centered;
 }

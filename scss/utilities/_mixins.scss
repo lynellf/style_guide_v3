@@ -1,4 +1,6 @@
-//Media Queries
+// ==========================================================================
+// Media Queries
+// ==========================================================================
 
 @mixin mq($break) {
     $value: map-get($breaks, $break);
@@ -21,15 +23,24 @@
     }
 }
 
-//Flexbox settings
+// ==========================================================================
+// Flexbox Configuration
+// ==========================================================================
 
 @mixin flex($direction: column, $justify: space-between, $wrap: null){
     display: flex;
     flex-direction: $direction;
     flex-wrap: $wrap;
+    justify-content: $justify;
 }
 
-//Grid Settings
+@mixin centered {
+    margin: 0 auto;
+}
+
+// ==========================================================================
+// Grid Configuration
+// ==========================================================================
 
 @mixin flex--grid {
     max-width: pixels($grid--width);
@@ -41,12 +52,47 @@
     }
 }
 
+@mixin grid--gutters {
+    margin: 0 $grid--gutters;
+}
+
 @mixin grid--column {
-    flex: 1;
+    flex-basis: 100%;
 }
 
 @mixin grid--row {
     width: $grid-row--width;
 }
 
-//Element and Modifier BEM Selectors
+@mixin blockquote {
+    padding: 0 0 0 pem(16);
+    border-left: solid medium $color--secondary;
+    font-style: italic;
+}
+
+// ==========================================================================
+// BEM Selectors
+// ==========================================================================
+
+@mixin e($element) {
+    &__#{$element} {
+        @content;
+    }
+}
+
+@mixin m($modifier) {
+    &--#{$modifier} {
+        @content;
+    }
+}
+
+// ==========================================================================
+// Misc.
+// ==========================================================================
+
+//Centering images
+
+@mixin center-img($top: pem(16), $bottom: pem(16)) {
+    display: block;
+    margin: $top auto $bottom;
+}
