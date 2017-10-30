@@ -1,12 +1,21 @@
-//Links
+// ==========================================================================
+// Standard Page Links
+// ==========================================================================
+
 %link {
     text-decoration: none;
     color: $color--primary;
     &:hover {
+        a {
+            color: $color--nav-link-hover;
+        }
         color: $color--secondary;
     }
 }
-//Images
+
+// ==========================================================================
+// Images
+// ==========================================================================
 
 %img--frame {
     border: thin solid grey;
@@ -20,32 +29,42 @@
 
 %img--avatar {
     display: block;
-    margin: pem(16) auto;
+    margin: $margin--two auto;
 }
 
-//Headlines
+// ==========================================================================
+// Headlines
+// ==========================================================================
+
 %headline--primary {
-    font-weight: $font-weight--bold;
+    font-weight: $font-weight--ultra-bold;
     color: $color--secondary;
+    margin-left: $margin--two;
 }
 
 %headline--secondary {
     font-weight: $font-weight--thin;
 }
 
+// ==========================================================================
+// Navigation
+// ==========================================================================
+
 //Nav items
 
 %nav--item {
     display: block;
-    margin: pem(8) 0;
-    width: 90%;
-    padding: pem(8);
+    margin: $margin--one 0;
+    width: 100%;
+    padding: pem(12);
     &:hover, :active {
-        border-radius: pem(12.5);
+        border-radius: $border--radius;
         background: $color--secondary;
         color: white;
     }
 }
+
+//Nav Links
 
 %nav--a {
     text-decoration: none;
@@ -53,4 +72,32 @@
     &:hover {
         color: white;
     }
+}
+
+// ==========================================================================
+// Grid
+// ==========================================================================
+
+%grid--centered {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+%grid--rounded {
+    padding-top: pem(8);
+    border-radius: $border--radius;
+    text-align: center;
+    min-height: pem(44);
+    max-height: pem(44);
+}
+
+%container--centered {
+    @include mq('med') {
+        max-width: map-get($map: $breaks, $key: 'med' );
+    }
+    @include mq('lg'){
+        max-width: $container--max-width;
+        padding: pem(16);
+    }
+    margin: auto;
 }

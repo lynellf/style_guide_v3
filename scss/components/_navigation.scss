@@ -1,9 +1,16 @@
 .nav {
+    @include mq('lg') {
+        @include flex($direction: row, $justify: space-between, $wrap: null);
+    }
     @include e('item'){
         @extend %nav--item;
-
-        * {
+        a {
             @extend %nav--a;
+        }
+        &:hover {
+            a {
+                color: $color--nav-link-hover;
+            }
         }
     }
 }

@@ -34,13 +34,27 @@ $font-weight--ultra-bold: 900;
 }
 
 // ==========================================================================
+// Margins & Rounded Corners
+// ==========================================================================
+
+$margin--one: pem(8);
+$margin--two: pem(16);
+$margin--three: pem(24);
+$margin--four: pem(32);
+
+//Rounded edges
+$border--radius: pem(5.5);
+
+// ==========================================================================
 // Breakpoints
 // ==========================================================================
 
 $breaks: (
     'med': 480px,
-    'lg': 1024px
+    'lg': 769px
 );
+
+$container--max-width: 1260px;
 
 // ==========================================================================
 // Colors
@@ -59,10 +73,16 @@ $lilac: #DEB2EE;
 $vista: #88D9A0;
 $sea-pink: #EC9FA3;
 $tangerine: #FD9F85;
+$black: #222;
+$white: #fff;
 
 //Main colors
 $color--primary: $malibu;
 $color--secondary: $viking;
+
+//Navigation
+$color--nav-link: $black;
+$color--nav-link-hover: $white;
 
 //Buttons
 $color--default: $color--primary;
@@ -70,6 +90,14 @@ $color--success: $emerald;
 $color--error: $sunglo;
 $color--warning: $coral;
 $color--info: $majesty;
+
+$color--buttons: (
+    'default': $color--default,
+    'success': $color--success,
+    'error': $color--error,
+    'warning': $color--warning,
+    'info': $color--info
+);
 
 //Grid System
 

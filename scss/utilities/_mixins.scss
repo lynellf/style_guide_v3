@@ -34,7 +34,8 @@
     justify-content: $justify;
 }
 
-@mixin centered {
+@mixin centered($width: null) {
+    width: $width;
     margin: 0 auto;
 }
 
@@ -42,32 +43,36 @@
 // Grid Configuration
 // ==========================================================================
 
-@mixin flex--grid {
-    max-width: pixels($grid--width);
+@mixin flex--grid($max-width: $grid--width, $just: space-between, $margin: $margin--two) {
+    max-width: pixels($max-width);
+    margin-top: $margin;
+    margin-bottom: $margin;
     @include mq('med') {
         display: block;
     }
     @include mq('lg') {
-        @include flex($wrap: wrap, $direction: null, $justify: space-between);
+        @include flex($wrap: wrap, $direction: null, $justify: $just);
     }
 }
 
-@mixin grid--gutters {
-    margin: 0 $grid--gutters;
+@mixin grid--gutters($width: $grid--gutters, $bottom: pem(16)) {
+    margin-left: $width;
+    margin-right: $width;
+    margin-bottom: $bottom;
 }
 
-@mixin grid--column {
-    flex-basis: 100%;
+
+
+@mixin grid--row($width: $grid-row--width) {
+    width: $width;
 }
 
-@mixin grid--row {
-    width: $grid-row--width;
-}
-
-@mixin blockquote {
+@mixin blockquote($padding: pem(16), $color: $color--secondary, $margin: $margin--two) {
     padding: 0 0 0 pem(16);
-    border-left: solid medium $color--secondary;
+    border-left: solid thick $color;
     font-style: italic;
+    margin-top: $margin;
+    margin-bottom: $margin;
 }
 
 // ==========================================================================
@@ -84,15 +89,4 @@
     &--#{$modifier} {
         @content;
     }
-}
-
-// ==========================================================================
-// Misc.
-// ==========================================================================
-
-//Centering images
-
-@mixin center-img($top: pem(16), $bottom: pem(16)) {
-    display: block;
-    margin: $top auto $bottom;
 }

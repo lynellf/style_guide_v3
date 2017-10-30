@@ -1,5 +1,6 @@
 .container {
     @include flex($direction: column, $justify: null, $wrap: wrap);
+    @extend %container--centered;
 }
 
 .grid {
@@ -10,20 +11,21 @@
     @include e('col') {
         @each $col, $width in $grid-col--width {
             @include m(#{$col}) {
-                @include grid--column;
                 @include grid--gutters;
                 flex: $width;
+                &.centered {
+                    @extend %grid--centered;
+                }
             }
+            
         }
     }
+
 }
 
 @each $el, $color in $color--grid {
     .grid__col--#{$el}.theme__colors {
         background: #{$color};
+        @extend %grid--rounded;
     }
-}
-
-.centered {
-    @include centered;
 }

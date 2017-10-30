@@ -5,6 +5,8 @@
   color: #52DDFC; }
   .link:hover {
     color: #58E1C1; }
+    .link:hover a {
+      color: #fff; }
 
 .img--frame {
   border: thin solid grey;
@@ -19,8 +21,9 @@
   margin: 1em auto; }
 
 .headline--primary {
-  font-weight: 700;
-  color: #58E1C1; }
+  font-weight: 900;
+  color: #58E1C1;
+  margin-left: 1em; }
 
 .headline--secondary {
   font-weight: 100; }
@@ -28,25 +31,46 @@
 .nav__item {
   display: block;
   margin: 0.5em 0;
-  width: 90%;
-  padding: 0.5em; }
+  width: 100%;
+  padding: 0.75em; }
   .nav__item:hover, .nav__item :active {
-    border-radius: 0.78125em;
+    border-radius: 0.34375em;
     background: #58E1C1;
     color: white; }
 
-.nav__item * {
+.nav__item a {
   text-decoration: none;
   color: black; }
-  .nav__item :hover {
+  .nav__item a:hover {
     color: white; }
+
+.grid__col--3.centered, .grid__col--4.centered, .grid__col--5.centered, .grid__col--6.centered, .grid__col--7.centered, .grid__col--8.centered, .grid__col--12.centered {
+  margin-left: auto;
+  margin-right: auto; }
+
+.grid__col--3.theme__colors, .grid__col--4.theme__colors, .grid__col--5.theme__colors, .grid__col--6.theme__colors, .grid__col--7.theme__colors, .grid__col--8.theme__colors, .grid__col--12.theme__colors {
+  padding-top: 0.5em;
+  border-radius: 0.34375em;
+  text-align: center;
+  min-height: 2.75em;
+  max-height: 2.75em; }
+
+.container {
+  margin: auto; }
+  @media (min-width: 480px) {
+    .container {
+      max-width: 480px; } }
+  @media (min-width: 769px) {
+    .container {
+      max-width: 1260px;
+      padding: 1em; } }
 
 * {
   box-sizing: border-box; }
 
 ul {
   padding-left: 0;
-  margin: 5em auto 10em;
+  margin: 2em auto;
   text-align: center; }
 
 p {
@@ -58,42 +82,51 @@ p {
   flex-wrap: wrap; }
 
 .grid__row {
-  max-width: 1260px; }
+  max-width: 1260px;
+  margin-top: 1em;
+  margin-bottom: 1em; }
   @media (min-width: 480px) {
     .grid__row {
       display: block; } }
-  @media (min-width: 1024px) {
+  @media (min-width: 769px) {
     .grid__row {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between; } }
 .grid__col--3 {
-  flex-basis: 100%;
-  margin: 0 0.3125em;
+  margin-left: 0.3125em;
+  margin-right: 0.3125em;
+  margin-bottom: 1em;
   flex: 0.25; }
 .grid__col--4 {
-  flex-basis: 100%;
-  margin: 0 0.3125em;
+  margin-left: 0.3125em;
+  margin-right: 0.3125em;
+  margin-bottom: 1em;
   flex: 0.3333333333; }
 .grid__col--5 {
-  flex-basis: 100%;
-  margin: 0 0.3125em;
+  margin-left: 0.3125em;
+  margin-right: 0.3125em;
+  margin-bottom: 1em;
   flex: 0.4166666667; }
 .grid__col--6 {
-  flex-basis: 100%;
-  margin: 0 0.3125em;
+  margin-left: 0.3125em;
+  margin-right: 0.3125em;
+  margin-bottom: 1em;
   flex: 0.5; }
 .grid__col--7 {
-  flex-basis: 100%;
-  margin: 0 0.3125em;
+  margin-left: 0.3125em;
+  margin-right: 0.3125em;
+  margin-bottom: 1em;
   flex: 0.5833333333; }
 .grid__col--8 {
-  flex-basis: 100%;
-  margin: 0 0.3125em;
+  margin-left: 0.3125em;
+  margin-right: 0.3125em;
+  margin-bottom: 1em;
   flex: 0.6666666667; }
 .grid__col--12 {
-  flex-basis: 100%;
-  margin: 0 0.3125em;
+  margin-left: 0.3125em;
+  margin-right: 0.3125em;
+  margin-bottom: 1em;
   flex: 1; }
 
 .grid__col--3.theme__colors {
@@ -117,15 +150,37 @@ p {
 .grid__col--12.theme__colors {
   background: #80E8D1; }
 
-.centered {
-  margin: 0 auto; }
+.btn--default.theme__colors {
+  background: #52DDFC; }
+
+.btn--success.theme__colors {
+  background: #63CC82; }
+
+.btn--error.theme__colors {
+  background: #E4757A; }
+
+.btn--warning.theme__colors {
+  background: #FD7856; }
+
+.btn--info.theme__colors {
+  background: #927BC1; }
+
+@media (min-width: 769px) {
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; } }
+.nav__item:hover a {
+  color: #fff; }
 
 .container {
   font-family: "Open Sans", sans-serif; }
 
 .blockquote {
   padding: 0 0 0 1em;
-  border-left: solid medium #58E1C1;
-  font-style: italic; }
+  border-left: solid thick #58E1C1;
+  font-style: italic;
+  margin-top: 1em;
+  margin-bottom: 1em; }
 
 /*# sourceMappingURL=styles.css.map */

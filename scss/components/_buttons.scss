@@ -1,0 +1,11 @@
+@each $button, $color in $color--buttons {
+    .btn {
+        @include m(#{$button}) {
+            &.theme{
+                @include e('colors') {
+                    background: $color;
+                }
+            }
+        }
+    }
+}
