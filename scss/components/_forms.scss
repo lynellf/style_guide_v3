@@ -1,0 +1,18 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    @include e('label') {
+        @include m('hidden') {
+            display: none;
+        }
+    }
+
+    @include e('input') {
+        width: 100%;
+        border: none;
+        border-bottom: thick solid $color--secondary;
+        margin: pem(20);
+    }
+}

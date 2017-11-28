@@ -150,6 +150,21 @@ p {
 .grid__col--12.theme__colors {
   background: #80E8D1; }
 
+[class^="btn--"] {
+  display: block;
+  border: none;
+  border-radius: 0.25em;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  border-radius: 0.34375em;
+  padding: 0.9375em 4.6875em;
+  margin: 1em 1.875em; }
+  @media (min-width: 480px) {
+    [class^="btn--"] {
+      width: 100%; } }
+
 .btn--default.theme__colors {
   background: #52DDFC; }
 
@@ -164,6 +179,18 @@ p {
 
 .btn--info.theme__colors {
   background: #927BC1; }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
+  .form__label--hidden {
+    display: none; }
+  .form__input {
+    width: 100%;
+    border: none;
+    border-bottom: thick solid #58E1C1;
+    margin: 1.25em; }
 
 @media (min-width: 769px) {
   .nav {
