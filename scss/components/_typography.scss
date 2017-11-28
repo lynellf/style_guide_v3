@@ -3,7 +3,8 @@
 }
 
 .container {
-    font-family: $font-stack--primary
+    font-family: $font-stack--primary;
+    color: $grey;
 }
 
 .link {
@@ -11,7 +12,7 @@
 }
 
 .blockquote {
-    @include blockquote;
+    @extend %blockquote;
 }
 
 .headline {

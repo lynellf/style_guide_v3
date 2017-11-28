@@ -11,7 +11,7 @@
     @include e('col') {
         @each $col, $width in $grid-col--width {
             @include m(#{$col}) {
-                @include grid--gutters;
+                @extend %grid--gutters;
                 flex: $width;
                 &.centered {
                     @extend %grid--centered;

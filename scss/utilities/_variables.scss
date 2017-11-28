@@ -5,8 +5,11 @@
 // Fonts
 // ==========================================================================
 $base--font-size: 16;
-$font-url: "https://fonts.googleapis.com/css?family=Open+Sans";
-$font-stack--primary: 'Open Sans',
+$font-url: 'http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900';
+$font-stack--primary: 'Lato',
+'Helvetica Neue',
+Helvetica,
+Arial,
 sans-serif;
 // Font Weights
 $font-weight--thin: 100;
@@ -43,7 +46,7 @@ $margin--three: pem(24);
 $margin--four: pem(32);
 
 //Rounded edges
-$border--radius: pem(5.5);
+$border--radius: pem(6);
 
 // ==========================================================================
 // Breakpoints
@@ -75,6 +78,7 @@ $sea-pink: #EC9FA3;
 $tangerine: #FD9F85;
 $black: #222;
 $white: #fff;
+$grey: #797e83;
 
 //Main colors
 $color--primary: $malibu;
