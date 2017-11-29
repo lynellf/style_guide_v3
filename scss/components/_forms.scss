@@ -1,5 +1,6 @@
 .form {
-    @extend %form--flex;
+    @extend %flex--column;
+    justify-content: center;
     
     @include e('label') {
         @include m('hidden') {
@@ -12,5 +13,9 @@
         border-bottom: thick solid $color--secondary;
         margin: pem(20);
         padding: pem(16);
+    }
+
+    :last-child {
+        margin: auto;
     }
 }

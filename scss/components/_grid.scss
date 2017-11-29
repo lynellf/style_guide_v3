@@ -1,20 +1,40 @@
 .container {
-    @include flex($direction: column, $justify: null, $wrap: wrap);
-    @extend %container--centered;
+    @extend %flex--column;
+    flex-wrap: wrap;
+    margin: auto;
+
+    @include mq('med') {
+        max-width: 68%;
+    }
+    @include mq('lg') {
+        max-width: pem(980);
+    }
 }
 
 .grid {
     @include e('row') {
-        @include flex--grid;
+        max-width: pixels($grid--width);
+        margin-top: $margin--two;
+        margin-bottom: $margin--two;
+
+        @include mq('med') {
+            display: block;
+        }
+
+        @include mq('lg') {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
     }
 
     @include e('col') {
         @each $col, $width in $grid-col--width {
             @include m(#{$col}) {
-                @extend %grid--gutters;
+                margin: 0 $margin--one $margin--two;
                 flex: $width;
                 &.centered {
-                    @extend %grid--centered;
+                    @extend %centered--x;
                 }
             }
             
@@ -26,6 +46,10 @@
 @each $el, $color in $color--grid {
     .grid__col--#{$el}.theme__colors {
         background: #{$color};
-        @extend %grid--rounded;
+        padding-top: pem(8);
+        border-radius: $border--radius;
+        text-align: center;
+        min-height: pem(44);
+        max-height: pem(44);
     }
 }

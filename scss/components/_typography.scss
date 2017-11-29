@@ -8,18 +8,34 @@
 }
 
 .link {
-    @extend %link;
+    text-decoration: none;
+    color: $color--primary;
+    font-weight: $font-weight--bold;
+    &:hover {
+        a {
+            color: $color--nav-link-hover;
+        }
+        color: $color--secondary;
+    }
 }
 
 .blockquote {
-    @extend %blockquote;
+    padding: 0 0 0 pem(16);
+    font-size: pem(21.5);
+    font-style: italic;
+    border-left: solid thick $color--secondary;
+    border-width: pem(6);
+    margin-top: $margin--two;
+    margin-bottom: $margin--two;
 }
 
 .headline {
     @include m(primary) {
-        @extend %headline--primary;
+        font-weight: $font-weight--ultra-bold;
+        color: $color--secondary;
+        margin-left: $margin--two;
     }
     @include m(secondary) {
-        @extend %headline--secondary;
+        font-weight: $font-weight--light;
     }
 }

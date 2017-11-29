@@ -1,19 +1,8 @@
-[class^="btn--"] {
-    @extend %btn;
-    @extend %text--center;
-    
-    @include mq('med') {
-        width: 100%;
-    }
-
-    @include mq('lg') {
-        width: auto;
-    }
-}
-
 @each $button, $color in $color--buttons {
     .btn {
+        @extend %btn;
         @include m(#{$button}) {
+            @extend %btn;
             &.theme{
                 @include e('colors') {
                     background: $color;

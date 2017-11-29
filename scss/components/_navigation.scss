@@ -1,11 +1,33 @@
 .nav {
     @include mq('lg') {
-        @include flex($direction: row, $justify: space-between, $wrap: null);
+        display: flex;
+        flex-direction: row;
+        margin-right: pem(64);
     }
     @include e('item'){
-        @extend %nav--item;
+        display: block;
+        width: 100%;
+        padding: pem(12);
+        &:hover, :active {
+            border-radius: $border--radius;
+            background: $color--secondary;
+            color: white;
+        }
+    
+        @include mq('med') {
+            margin: $margin--one 0;
+        }
+    
+        @include mq('lg') {
+            margin: 0 $margin--one;
+        }
+
         a {
-            @extend %nav--a;
+            text-decoration: none;
+            color: $grey;
+            &:hover {
+            color: white;
+            }
         }
         &:hover {
             a {

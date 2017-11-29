@@ -34,37 +34,6 @@
     justify-content: $justify;
 }
 
-@mixin centered($width: null) {
-    width: $width;
-    margin: 0 auto;
-}
-
-// ==========================================================================
-// Grid Configuration
-// ==========================================================================
-
-@mixin flex--grid($max-width: $grid--width, $just: space-between, $margin: $margin--two) {
-    max-width: pixels($max-width);
-    margin-top: $margin;
-    margin-bottom: $margin;
-    @include mq('med') {
-        display: block;
-    }
-    @include mq('lg') {
-        @include flex($wrap: wrap, $direction: null, $justify: $just);
-    }
-}
-
-@mixin grid--gutters($width: $grid--gutters, $bottom: pem(16)) {
-    margin-left: $width;
-    margin-right: $width;
-    margin-bottom: $bottom;
-}
-
-@mixin grid--row($width: $grid-row--width) {
-    width: $width;
-}
-
 // ==========================================================================
 // BEM Selectors
 // ==========================================================================

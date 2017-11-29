@@ -5,10 +5,12 @@
 
     @include m(frame) {
         @extend %img--center;
-        @extend %img--frame;
+        border: thin solid $grey;
+        padding: pem(16);
     }
     
     @include m(avatar) {
-        @extend %img--avatar;
+        display: block;
+        margin: $margin--two auto;
     }
 }

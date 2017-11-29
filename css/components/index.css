@@ -1,7 +1,7 @@
 /*
-Error: Undefined mixin 'flex'.
-        on line 2 of scss/components/_grid.scss, in `flex'
-        from line 2 of scss/components/_grid.scss
+Error: Undefined mixin 'mq'.
+        on line 6 of scss/components/_grid.scss, in `mq'
+        from line 6 of scss/components/_grid.scss
         from line 1 of scss/components/index.scss
 
 1: @import './_grid',
@@ -12,8 +12,8 @@ Error: Undefined mixin 'flex'.
 6: './_typography'
 
 Backtrace:
-scss/components/_grid.scss:2:in `flex'
-scss/components/_grid.scss:2
+scss/components/_grid.scss:6:in `mq'
+scss/components/_grid.scss:6
 scss/components/index.scss:1
 /var/lib/gems/2.3.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:352:in `block in visit_mixin'
 /var/lib/gems/2.3.0/gems/sass-3.5.1/lib/sass/stack.rb:98:in `block in with_mixin'
@@ -83,4 +83,4 @@ scss/components/index.scss:1
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'flex'.\A         on line 2 of scss/components/_grid.scss, in `flex'\A         from line 2 of scss/components/_grid.scss\A         from line 1 of scss/components/index.scss\A \A 1: @import './_grid',\A 2: './_buttons',\A 3: './_forms',\A 4: './_images',\A 5: './_navigation',\A 6: './_typography'"; }
+  content: "Error: Undefined mixin 'mq'.\A         on line 6 of scss/components/_grid.scss, in `mq'\A         from line 6 of scss/components/_grid.scss\A         from line 1 of scss/components/index.scss\A \A 1: @import './_grid',\A 2: './_buttons',\A 3: './_forms',\A 4: './_images',\A 5: './_navigation',\A 6: './_typography'"; }

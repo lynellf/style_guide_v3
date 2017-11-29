@@ -1,36 +1,10 @@
 // ==========================================================================
-// Standard Page Links
-// ==========================================================================
-
-%link {
-    text-decoration: none;
-    color: $color--primary;
-    font-weight: $font-weight--bold;
-    &:hover {
-        a {
-            color: $color--nav-link-hover;
-        }
-        color: $color--secondary;
-    }
-}
-
-// ==========================================================================
 // Images
 // ==========================================================================
-
-%img--frame {
-    border: thin solid grey;
-    padding: pem(16);
-}
 
 %img--center {
     display: block;
     margin: 0 auto;
-}
-
-%img--avatar {
-    display: block;
-    margin: $margin--two auto;
 }
 
 // ==========================================================================
@@ -48,89 +22,6 @@
     margin: $margin--two $margin--three;
 }
 
-// ==========================================================================
-// Headlines and Blockquote
-// ==========================================================================
-
-%headline--primary {
-    font-weight: $font-weight--ultra-bold;
-    color: $color--secondary;
-    margin-left: $margin--two;
-}
-
-%headline--secondary {
-    font-weight: $font-weight--light;
-}
-
-%blockquote {
-    padding: 0 0 0 pem(16);
-    font-size: pem(23);
-    font-style: italic;
-    border-left: solid thick $color--secondary;
-    margin-top: $margin--two;
-    margin-bottom: $margin--two;
-}
-
-// ==========================================================================
-// Navigation
-// ==========================================================================
-
-//Nav items
-
-%nav--item {
-    display: block;
-    width: 100%;
-    padding: pem(12);
-    &:hover, :active {
-        border-radius: $border--radius;
-        background: $color--secondary;
-        color: white;
-    }
-
-    @include mq('med') {
-        margin: $margin--one 0;
-    }
-
-    @include mq('lg') {
-        margin: 0 $margin--one;
-    }
-}
-
-//Nav Links
-
-%nav--a {
-    text-decoration: none;
-    color: black;
-    &:hover {
-        color: white;
-    }
-}
-
-// ==========================================================================
-// Grid
-// ==========================================================================
-
-%grid--centered {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-%grid--rounded {
-    padding-top: pem(8);
-    border-radius: $border--radius;
-    text-align: center;
-    min-height: pem(44);
-    max-height: pem(44);
-}
-
-%container--centered {
-    max-width: pem(980);
-    margin: auto;    
-}
-
-%grid--gutters {
-    margin: 0 $margin--one $margin--two;
-}
 
 // ==========================================================================
 // Alignment
@@ -140,14 +31,16 @@
     text-align: center;
 }
 
+%centered--x {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 // ==========================================================================
-// Form
+// Flexbox
 // ==========================================================================
 
-%form--flex {
-    @include mq('med') {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+%flex--column {
+    display: flex;
+    flex-direction: column;
 }
