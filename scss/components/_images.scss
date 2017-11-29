@@ -5,9 +5,9 @@
 
     @include m(frame) {
         @extend %img--center;
+        @extend %img--resize;
         border: thin solid $grey;
         padding: pem(16);
-        width: 100%;
     }
     
     @include m(avatar) {

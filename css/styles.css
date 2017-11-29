@@ -7,6 +7,10 @@
   display: block;
   margin: 0 auto; }
 
+.img--frame {
+  width: 100%;
+  height: auto; }
+
 .headline--primary {
   font-weight: 900;
   color: #58E1C1;
