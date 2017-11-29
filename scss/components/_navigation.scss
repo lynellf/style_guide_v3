@@ -1,4 +1,8 @@
 .nav {
+    padding-left: 0;
+    margin: 2em auto;
+    text-align: center;
+    
     @include mq('lg') {
         @include flex($direction: row, $justify: null, $wrap: null);
         margin-right: pem(64);

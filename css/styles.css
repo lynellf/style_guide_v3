@@ -44,11 +44,6 @@
 * {
   box-sizing: border-box; }
 
-ul {
-  padding-left: 0;
-  margin: 2em auto;
-  text-align: center; }
-
 p {
   line-height: 1.5em; }
 
@@ -290,11 +285,15 @@ p {
   display: block;
   margin: 1em auto; }
 
-@media (min-width: 769px) {
-  .nav {
-    display: flex;
-    flex-direction: row;
-    margin-right: 4em; } }
+.nav {
+  padding-left: 0;
+  margin: 2em auto;
+  text-align: center; }
+  @media (min-width: 769px) {
+    .nav {
+      display: flex;
+      flex-direction: row;
+      margin-right: 4em; } }
 
 .container {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;

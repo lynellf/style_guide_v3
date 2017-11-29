@@ -2,11 +2,6 @@
 * {
   box-sizing: border-box; }
 
-ul {
-  padding-left: 0;
-  margin: 2em auto;
-  text-align: center; }
-
 p {
   line-height: pem(24); }
 
