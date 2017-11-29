@@ -1,38 +1,9 @@
 .nav {
     @include mq('lg') {
-        display: flex;
-        flex-direction: row;
+        @include flex($direction: row, $justify: null, $wrap: null);
         margin-right: pem(64);
     }
     @include e('item'){
-        display: block;
-        width: 100%;
-        padding: pem(12);
-        &:hover, :active {
-            border-radius: $border--radius;
-            background: $color--secondary;
-            color: white;
-        }
-    
-        @include mq('med') {
-            margin: $margin--one 0;
-        }
-    
-        @include mq('lg') {
-            margin: 0 $margin--one;
-        }
-
-        a {
-            text-decoration: none;
-            color: $grey;
-            &:hover {
-            color: white;
-            }
-        }
-        &:hover {
-            a {
-                color: $color--nav-link-hover;
-            }
-        }
+        @extend %nav--item;
     }
 }

@@ -1,4 +1,12 @@
 // ==========================================================================
+// Links
+// ==========================================================================
+
+%link {
+    text-decoration: none;
+}
+
+// ==========================================================================
 // Images
 // ==========================================================================
 
@@ -8,20 +16,56 @@
 }
 
 // ==========================================================================
-// Buttons
+// Headlines
 // ==========================================================================
 
-%btn {
-    border: none;
-    border-radius: $border--radius;
-    color: $white;
-    text-transform: uppercase;
-    font-weight: $font-weight--bold;
-    border-radius: $border--radius;
-    padding: pem(15) pem(55);
-    margin: $margin--two $margin--three;
+%headline--primary {
+    font-weight: $font-weight--ultra-bold;
+    color: $color--secondary;
+    margin-left: $margin--two;
 }
 
+%headline--secondary {
+    font-weight: $font-weight--light;
+}
+
+// ==========================================================================
+// Navigation
+// ==========================================================================
+
+%nav--item {
+    display: block;
+    width: 100%;
+    padding: pem(12);
+    &:hover,
+     :active {
+        border-radius: $border--radius;
+        background: $color--secondary;
+        color: $white;
+    }
+
+    @include mq('med') {
+        margin: $margin--one 0;
+    }
+
+    @include mq('lg') {
+        margin: 0 $margin--one;
+    }
+
+    a {
+        @extend %link;
+        color: $grey;
+        &:hover {
+            color: $white;
+        }
+    }
+
+    &:hover {
+        a {
+            color: $color--nav-link-hover;
+        }
+    }
+}
 
 // ==========================================================================
 // Alignment
@@ -36,11 +80,3 @@
     margin-right: auto;
 }
 
-// ==========================================================================
-// Flexbox
-// ==========================================================================
-
-%flex--column {
-    display: flex;
-    flex-direction: column;
-}

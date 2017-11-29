@@ -1,12 +1,33 @@
 @each $button, $color in $color--buttons {
     .btn {
-        @extend %btn;
         @include m(#{$button}) {
-            @extend %btn;
+            border: none;
+            border-radius: $border--radius;
+            color: $white;
+            text-transform: uppercase;
+            font-weight: $font-weight--bold;
+            border-radius: $border--radius;
+            padding: pem(15) pem(70);
+            margin: $margin--two $margin--three;
             &.theme{
                 @include e('colors') {
                     background: $color;
                 }
+            }
+
+            @include mq('sm') {
+                margin: $margin--two 0;
+                width: 100%;
+            }
+
+            @include mq('med') {
+                margin: $margin--two 0;
+                width: 100%;
+            }
+
+            @include mq('lg') {
+                margin: $margin--two $margin--three;
+                width: auto;
             }
         }
     }
